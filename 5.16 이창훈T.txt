@@ -1,0 +1,678 @@
+5/16
+
+<div id="상우" class="최 상우" style="color:#ff0;">01</div>
+
+style="color:#ff0;" > div id="상우" > class="최 상우
+
+확장에서 Auto Rename Tag설치
+
+inherit : 브라우저가 원래 가지고 있는 폰트사이즈. 보통 16px 
+figure : 이미지 넣을 때 씀 
+a, strong, em(기울기),글자의 스타일 관여하는 것들 -> inline
+header,nav,main,footer -> 시멘틱(의미있는) 태그
+section : 큰박스라 생각하기
+
+-------------------------------------------------------------------------
+5/17
+
+리엑터 - 제이쿼리 별로 사용 안함, 라이브러리의 일종
+
+display : block, none, inline, flex
+display - 현상 position - 어디에
+경로  ./ 나의 형제 레벨  ../ 나의 부모 레벨
+
+주석 단축키 
+ctrl + /
+ctrl + alt + A
+
+상대경로 절대경로, target에 대해 
+
+css 파일 빼놓는거 -> '모듈화한다'
+
+width: 50%; -> 부모 넓이에서의 50%
+
+auto 는 자연스러운 값, % 는 부모의 값에대한 %
+auto와 100%는 다름
+
+상우하좌
+
+박스 사이즈가 있을 때 margin : 0 auto 가운데로오게함
+
+strong태그(박스가 아니기 떄문에)  - margin 좌우만 먹음.
+                                               - padding 좌우만!! 먹음. 상하는 먹는거 처럼 보임(하지만 실제는 공간차지하지 않음)
+
+설정 -> save 검색 -> format  on save 체크
+
+반응형 
+max-width: 1200px;
+width: 100%;
+
+-------------------------------------------------------------------------
+5/18
+깃허브, display - flex
+-------------------------------------------------------------------------
+5/19
+프론트 + 디자인 + 백엔드는 덤
+디자인 - 자세하게 말고 쓸 정도만
+
+가로배열 - display - flex
+display - none (기본값), inline(잘안씀), block(나타나라), box,inline-block{box 속성 + inline속성(가로배열, 띄어쓰기, vertical align)}
+none<->block  none<->flex  block<->inline
+
+겹침 - position- absolute
+position(어디에, 좌표를 가진다) - static(none과 비슷, position이 아니게함. 좌표를 안가짐), relative(기준), fixed(absolute랑 비슷하지만 기준이 없음 viewport만 기준으로 생각함. 그래서 화면 넘쳐도 스크롤 바가 안생김.)
+                                              absolute(좌표를 가짐. 떠오른다, 쪼그라든다, 기준이 없다(부모, 조상 등등 기준 무시 body가 기준이 됨), 겹쳐놓을때, 떠오름 html 상에서는 자식이지만 떠오르면서 width, height값이 없어짐?, top lefft bottom right 상우하좌 얼만큼 떨어지는지 값)
+
+float(가로배열) 글자와 그림사이에 관여
+
+position 블록 인라이요소 차이 중요
+css 스타일 배경이미지 적용 중요
+
+
+position 
+
+transform은 레이아웃을 안깬다
+박스를 띄워서 가운데 오게 하는것 공식!
+position: absolute; 는 꼭 부모가 있을때!
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+
+index - 번호 
+
+document.querySelector('.popup button').addEventListener('click', function(){})
+                                                                 이벤트    할일
+
+
+이벤트는 정해져있어서 외워야함.(클릭 스크롤 이벤트 휠이벤트 포커스 )
+휠이벤트는 마우스 휠움직이는거 
+마우스올리고 내리고 - hover
+자바보다 제이쿼리가 쉽고 리엑트가 더 쉽다
+but 리엑트 진입장벽이 어렵다
+
+
+vh(viewport height) 화면 높이
+
+nav.on(nav에 on이 붙었을때)
+document.querySelector('.mopen').addEventListener('click', function () {
+            document.querySelector('nav').classList.toggle('oo')
+        })
+
+add 열기만 가능
+toggle 열고 닫기 가능
+https://bbayong28.github.io/document/
+
+cursor:pointer;
+-------------------------------------------------------------------------
+5/20
+:hover
+::after
+::before
+position에대한 이해를 높이기 위해 
+
+script의 위치
+head 안에 써도되고 body안에 써도 되고 바디 박에 써도는데
+
+실무에서는 head 에 써라고 많이함 (안먹을 때 defer 씀)
+body내용 안 마지막 
+body내용 밖은 에러뜨는데가 있음
+
+
+head 안에 script 쓰더라도 구현되게 하는방법
+1. 자바스크립트안에 window.addEventListener('DOMContentLoaded', function () { })쓰기!!!!  
+    DOMContentLoaded가 다 실행 됐을 때 적용 되어라는 내용임. 
+2. head 안 script 연결에 defer 쓰기
+   <script src="../js/position03.js" defer></script>
+max-width: 100%; 자기의 100%유지
+
+1분코딩 - flex
+https://studiomeal.com/archives/197
+
+gap 익스안돌아감
+transform 레이아웃을 안깨는 성질이 있음.
+
+웹 아이콘  -XEICON(네이버 관리 아이콘) - 폰트어썸(4버전까지 무료/서양에서 만든거라 디자인이 샤프하지않음)  - 부트스트랩
+
+cdn(Content Delivery Network) - 공짜로 어디에든 존재하는 소스, 
+보통 홈펨이지 만들때 폰트는 가장 인기있는 종류 하나,더하고 싶으면 2-3개까지 왜냐면 끌어오면 로딩시간 오래걸림.
+
+라이센스 중요!  대경스틸 이미지 포폴에 올려놓으면 걸림.
+구글웹폰트 - 라이센스프리 공짜.     나눔 명조 나눔고딕(네이버꺼)
+100~900까지 플러스하고 import가서 <style></style> 사이복사해서 reset이나 css파일 맨위에 붙이기 body만들고 그 밑에꺼 복사해서 붙이기
+noto sans Korean - 홀수가 이쁨
+
+note sans font-weight 100(thin) 300(light) 400(regular) 500(medium) 700(bold) 900(black)
+font-size - 기본 16px 
+-------------------------------------------------------------------------
+5/23
+5-6개월해도 자바스크립트 모를 수 있음. 그래도 기초는 되야함.
+
+px 
+em 정해진폰트크기의 배수(정해진 폰트 크기 없다면 기본 16px)
+rem html 최상위에서 정해둔 폰트 사이즈의 배수(보통 1rem은 16px)
+기본 폰트 - 맑은고딕임
+
+
+css 젤 위에 @charset "utf-8"; 적으면 css 주석들이 페이지소스보기에서 보임
+
+
+제이쿼리ㅏㄹ는 라이브러리가 도입되어야 slick을 쓸 수 있음.
+https://kenwheeler.github.io/slick/-> get it now -> download now, view on github 무시하고 밑에 상자에 위에 slick.css 주소 다른이름으로 링크저장해서 css 파일안에 저장->
+slick.min.js 다른이름으로 링크저장해서 js 파일에 넣으면됨
+
+jquery cdn검색 ->https://releases.jquery.com/ ->Query 1.x을 많이씀 인터넷 익스플로어 돌아가서.->jQuery 1.x
+jQuery Core 1.12.4 - uncompressed, minified->minified 오른쪽 마우스 누르고 다른이름이로 링크저장해서 js 파일에 넣기
+라이브러리 : 자유도가 많음
+framework : 만들어진 틀 자유도가 적음 - 만든사람의 법칙에 맞게 구겨넣어야 함.
+
+
+$(function () {
+    $('h1').hide()
+}) 
+
+function 으로 감싸줘야 위에(head에) 써도 실행됨.
+
+
+$('h1').hide() <- 제이쿼리 메소드라고 부름!
+slick 다운받으면 document.querySelector('h1').style.display = 'none'; 이 긴 문장을
+$('h1').hide() 이렇게 간단히 쓰면 실행 됨.
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/main.js"></script>
+
+제이쿼리 파일 아래에 내가 만들 자바스크립트 사이에 slick.min.js 파일 넣음
+리셋 파일 아래에 내가 만들 css 사이에 slick.css 파일 넣음
+
+class 네이밍 시, 숫자가 먼저 오면 안됨, 정석은 하이픈(-)인데 더블클릭하면 한번에 선택이 안됨. 그래서 음절 앞 대문자쓰거나(카멜표기볍) 언더바(_) 많이씀(ooo 표기법)
+
+이미지 같은거 써도 흑백인거 쓰고싶으면 포토샵가공해서 다시저장해서쓰며 트래픽 잡아먹으니까 그냥 있는 파일에 css로 흑백 만들어주는게 트래픽 덜 잡ㅂ아먹음
+
+<main role="main"></main> role="main인터넷익스플로어 돌아가게 하고싶을때 적어줌
+
+header main footer - 기억하기
+main 의 가장자리에 쓰는 제일 큰 박스  section
+section은 이름을 붙여주는게 룰이다!!!
+
+margin은 background를 포함하지 못하고 마진겹침 현상이 있어서 padding으로 줌.
+
+ppsition dislplay width... font관련... css 순서! 
+
+상  하  좌  우
+상  좌우  하
+상하  좌우
+
+line-height: 1.618이 황금비율이지만 선생님 1.4많이씀 포토샵 기본비율은 1.25!
+
+-------------------------------------------------------------------------
+5/24
+
+block - margin,padding상하좌우, height, width 다 가능
+        - 첫 속성이 height가 auto가 아님
+inline - margin,padding 좌우만 가능
+
+가로배열 float(유지보수 시 중요, 모르면 안됨, 사이트하나 만들어 볼꺼다), flex, grid, table
+
+position - static(), relative(기준), absolute(뜬다, 쪼그라든다, block),fixed(별로 쓸일 없음, 포폴만들때는 단골)
+span strong em a -> 글자에 관련된 태그 -> inline요소 -> width,height,margin,padding 쓸 수 없음.
+
+기본, 일반 text - color 거의 안씀(가독성떨어짐)  무채색은 color 아님.
+
+주소창 D:/ 치면 D 드라이브로 감
+
+div가 쌓이면 안좋음
+
+:root 컬러 쓰는 법(익스에서 안돌아감)
+:root { --red: #dc3545;}(:root --mc: #dc3545;}) 를 css위에 적어놓고 원하는 곳에  color: var(--red);(color : var(--mc);) 적으면 됨.
+
+rem쓰는 법
+html {font-size: 20px;}
+body {font-size: 0.8rem;}
+.header .top_banner {line-height: 30px;}
+
+보통 이미지는 크게만듦, 작게 보여줌 픽셀때문에
+but 로고는 뭉개지는 현상이 있어서 이미지를 보통 2배로 뻥튀기함.(시안 보내면 320사이즈에 맞추면 이미지640으로 씀.)
+ 
+<!-- a로 레이아웃을 잡지 않음 그래서 div로 감쌈 -->
+
+메뉴쪽에 부모자식 정확히 해주는게 좋음-> nav>ul ( nav ul 써도 됨 )
+.header nav>ul {
+    display: flex;
+}
+
+~은 형제라는 뜻 li~li는 첫 li 자기자신을 뺀 나머지 li
+
+
+vertical-align은 block 에서 안먹음
+
+
+슬릭 옵션
+https://github.com/kenwheeler/slick/
+
+margin  0  auto    position에서 안먹음
+
+
+text-indent:
+
+
+
+신화영_요구사항 확인.pptx
+
+이번주 금요일 27일 오후 6:00 ~  6:50분사이에 카톡으로 제출(시간 엄수 저시간 사이에만!!)
+
+커버(이름이나 주제같은거) 만들고, 좋아하는 사이트 주제(패션 건설 자동차)하나 정해서 사이트 30장
+ 
+내용은 장마다 스크린샷, url 소감 (이홈페이지는 어떤 요구를 받았을까, 주로쓰는 색, 보조로 쓴 색은 뭘까)
+
+-------------------------------------------------------------------------
+5/25
+
+V8-> node.js 서버 만들 수 있고 리모콘같은거 만들 수 있도록 함.
+html css javascript 배우면 php 보통 배움 
+
+우리는 node.js 할지 javaspring을 하게될지 아직모르지만 열심히!!
+inline-block vertical align이 먹음
+
+display:none, position:static은 PC에서는 안중요하지만 반응형들어가면 필수라 아주중요!
+
+기준에 overflow hidden하면 떠버린 absolute를 없앰
+
+
+position sticky는 익스에서 안먹음
+리엑트가 익스에서 먹는 이유는 익스에서 먹는걸로 바꿔주는 프로그램통해서.
+
+
+웹앱  앱처럼 작동하는 웹
+
+
+background-size: cover(박스를, 값을 다 채우려고하고)/contain(사진을 다 보여주려고 함)/auto
+background-attachment : fix
+
+
+ background: #f00 url(../img/main_banner01.jpg) no-repeat fixed center/cover; (축약형이다)
+
+    background: #f00;
+    background-image: url(../img/main_banner01.jpg);
+    background-repeat: no-repeat;
+    background-attachment: scroll/ fixed / local
+    background-size: cover;
+    background: #f00 url(../img/main_banner01.jpg) no-repeat fixed center/cover; 
+
+
+fixed는 아이폰(사파리)에서 안 돌아감
+
+here.addClass('on').siblings().removeClass('on')
+---------------------- ----------   -------------------
+여기에는 붙이고    형제들은       지운다
+
+    $('.main_slider').on('init reInit afterChange', function () {
+        var here = $('.slick-current');
+        here.addClass('on').siblings().removeClass('on')
+    });
+
+init reInit 붙이면 첫화면부터 적용됨.
+
+this
+this index
+
+자바스크립트로 고유번호 붙여주기
+$(function () {
+    $('.num li').on('click', function () {
+        var idx = $(this).index();
+        console.log(idx)
+    })
+})
+슬릭말고 이렇게 해서 도
+
+$(function () {
+    $('.num li').on('click', function () {
+        var idx = $(this).index();
+        console.log(idx);
+        $('.shoes .case ul').css({ top: -450 * idx })
+    })
+})
+
+https://jqueryui.com/ ->   Easing
+애니메이션 설계 등속이 아니고  베지어 곡선
+
+slide에 on붙이는거 
+바디안에다가 동그라미 하나 만들기
+500 500 검은 동그라미
+top 50 left 50 trase -50 -50%
+ul
+li*3(사각형박스) 원기준 네모를 absolute
+네모 border-left border top
+trasform 눈 45 45 입 135 로돌리기
+ul을 클릭했을때 ul에 on붙이기
+on붙었을때 li rotate값
+자바스크립트 2줄
+
+
+-------------------------------------------------------------------------
+5/26
+ul과 ol은 li만 쓸 수 있음
+
+ul 순서가 없는 목록  -- li
+ol 순서가 있는 목록  -- li
+dl 정의 목록  -- dt, dd 
+
+모던 웹을 위한 JavaScript + jQuery 입문
+
+
+position: absolute일 때 스크롤 바가 있었는데  position: fixed;로 바꾸니 스크롤 사라짐
+-------------------------------------------------------------------------
+5/27
+html,css는 좋은 책없고
+javascript 는 얇고 싸고 베스트셀러 밑에 있는 책
+구현을 잘 해야함
+
+h2 안에는 (피치못할 사정있으면 박스를 쓰기도 하지만) 보통 박스 안들어가는게 룰
+
+ <img src="./img/main_bg01.jpg" alt="DK-steel">
+alt에 이미지 설명 적어야 하지만 보통 회사에서 검색하면 하나라도 더 나오게하려고 회사이름 넣음
+
+address 태그 꼭 써야하는 건 아님 - 주소라는 의미가 아닌 오너의 의미
+
+address쓰면 글자가 기울어져있음 해제하려면  font-style: normal;
+
+-------------------------------------------------------------------------
+5/30
+html 에서 <div class="on">   ->   css 에서 div.on이 됨  ★중요★
+jQuery 에서 $('div').toggleClass('on')
+javascript 에서 $(function () { $(div).on('click', function () { $(this).toggleClass('on') }); })
+
+포토샵 시안잡기 2일정도
+
+contain ≠ conTain  -> 대소문자를 구분한다
+bbn-fdf__ 이렇게 섞어써도됨. 
+
+​
+
+1. 카멜 표기법(camel case)
+
+ 낙타 등처럼 내려갔다 올라가는 모양이라 하여 지어진 이름
+
+ 단어가 여러개 붙을 때, 앞 단어를 제외한 첫자를 대문자로 표기
+
+ java, C# 등의 언어들에서 권장 
+
+ ex) dailyUserTable
+
+2. 파스칼 표기법(pascal case)
+
+ 모든 단어의 앞자가 대문자로 시작(단어의 수와 상관 없음)
+
+ 네임스페이스, 이벤트, 프로퍼티, 클레스 네임을 지정할 때 주로 사용
+
+ 클래스 등에서 많이 사용
+
+ DailyUserTable
+
+3. 스네이크 표기법(snake case), 팟홀 표기법(pothole case) 
+
+ 모든 단어가 소문자로 표시
+
+ 다른 의미를 갖는 단어들의 조합에서 각 단어의 구분을 위하여 언더바( _ )를 붙힘
+
+ 단어 사이의 '_' 가 뱀처럼 보인다고 해서 유래
+
+ 언더바 표기법 이라고도 불리움
+
+ C++에서 권장
+
+       ex) daily_user_table
+
+4. 헝가리안 표기법
+
+ 접두어에 자료형을 붙힘
+
+ 마이크로소프트 개발자 중 헝가리 프로그래머가 쓰던 변수 명명법
+
+ 현재는 자료형을 쉽게 알아 볼수 있는 다양한 방법들이 많기 때문에 권장하지 않음
+
+ ex) strDailyUserTable
+
+5. 커스텀
+
+ 개발사만의 또는 개발 조직 자체적으로 사용하는 방식 또한 많이 사용
+
+ ex) 접두사(두자리)_풀네임(단어)_약어....
+
+     접두사 대문자, 단어의 첫글짜 대문자, 약어 대문자
+
+     ST_User_CD
+
+
+
+보통 카멜, 파스칼 섞어씀
+
+html 주석 <!-- { 2022.05.30 hwayeong}  --> 
+css 주석 /* 2022.05.30 hwayeong */
+js 주석 // 2022.05.30 hwayeong             or           /*  */
+
+풀페이지도 슬릭처럼 css js 파일 들고와야함
+
+
+자바스크립트에 header red해놓고 css에 파란색 적어서 위에 파일 다 연결해놓으면 파랑색나옴
+script링크 연결 뒤에 defer 쓰면 빨갛게 변함 근데 css에 !important적으면 다시 파랑이 우선됨
+
+반응형은    event가 click이 돼서 자바스크립트가 필수적!!
+
+
+max-width: 1200px;
+width: 100%;
+ 는 한번에 주는게 아니고 필요한 부분부분마다 나눠서 주는거다!!
+(스크롤 안생김!)
+
+
+-------------------------------------------------------------------------
+5/31
+
+package.json
+
+slick.min.js slick.js 두개 다름 slick.min.js 써야함
+slick자체에서 img를 display block 시킴
+자동으로 div 4개 만들어짐 -> 자손선택X, nth-child 만들어서 하면 낭패를 봄, 번호특정하기 어려움
+
+다운 받은 slick.min.js 파일 압축풀어서 slick.min.js, slick.css 파일 두개만 꺼냄
+
+
+figure.itm0$.itm  ->     <figure class="itm01 itm"></figure>
+                              <figure class="itm02 itm"></figure>
+                              <figure class="itm03 itm"></figure>
+
+
+-------------------------------------------------------------------------
+6/2
+
+html_run 여기선 html, css
+
+vs - code 단축키 필요한거 외우기
+
+:nth-child 선택자 잘 안씀
+
+후손 자식 부모 선택자는 알고있어야 함.
+
+css 네이밍 규칙  https://uipac.com/451
+(숫자가 먼저오면 안됨)
+
+display none 했다가 나타나는 거는 애님메이션 안먹음 높이값으로 조절
+hover 시 0-215로 바꾸면됨
+
+우리나라 실무 display -> position
+서양 position-.>display
+
+
+box-sizing: border-box를 *{}에 리셋해줬어도  ::before, ::After에는 적용 안됨 따로 줘야함
+
+
+
+opacity visibility
+
+
+-------------------------------------------------------------------------
+6/3
+
+
+desipossa
+
+
+
+
+
+/* inline-block 요소의 부모에 text-align:center로 박스를 가로로 배열할 수 있다. */
+        .inlineToInlineblock {
+            text-align: center;
+            font-size: 0;
+        }
+
+        /* inline요소를 inline-block요소로 바꿈 
+        박스 사이의 간격이 4px정도 생긴다.*/
+        .inlineToInlineblock span {
+            display: inline-block;
+            /* width는 box안 글자들 너비만큼이다. 따라서 width 값 없이 font-size: 0;이 되면 box 없어짐. */
+            width: 100px;
+            height: 100px;
+            font-size: 20px;
+            background: rgba(255, 0, 0, 0.3);
+            color: #fff;
+            padding: 30px 0;
+            margin: 30px 0;
+        }
+
+
+
+div선택자로 잘 ㄹ안잡음 
+
+        .position-absolute span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+        }l
+
+span inline이지만 position absolute 잡아놓으면 width 먹음
+
+
+https://caniuse.com/ 캔아이 유즈 
+
+
+-------------------------------------------------------------------------
+6/7
+폰트 그림
+폰트 그림위에 겹쳐놓기
+타이포그래피 중요
+원래 1920인데 스크롤바20떄문에 1900
+1200라인을 넣음 그 안에 그림 넣음
+1200이 될 수도 있고 1170 될수도 있음.
+
+
+1. 라인맞추기
+2. 강약조절 폰트,배경 강하게들어가면 약하게 들어가고 약하게 들어가면 강하게 들어간다(타이포그래피)
+3. 공간을 많이 준다(그림과 텍스트사이, 텍스트와 텍스트사이) - 일단 넓게주고 나중에 차츰차츰 줄여나감
+
+그리드시스템
+12칼럼 (12개의 구역을 나누고 구역안에 이미지를 채음 )왜 12일까? (12, 6+6, 4+4+4, 3+3+3+3) 
+
+font :노트산스로 통일!!\
+폰트의 두께 사이즈 공간 만으로 디자인 잡기, 색 주는거 금지 무조건 검정색,배경에 그림깔거나 어떤장치하는거 금지. (이미지 채우던가 흰 배경 해놓던가)
+
+px로 작업
+
+edit-> preferences -> general
+
+use regacy"New Document" interface
+use legacy free transform
+
+두개 체크
+
+Workspace 에 open Document as tab 체크 풀기
+unit & rulers 절대 손 대지말기(제일 중요)  units에 type pixels로 맞추기
+
+
+ctrl N 새파일 
+rgb color
+8bit
+
+https://c1jang.github.io/project01/
+
+
+-------------------------------------------------------------------------
+6/8
+시안 + 코딩한거 같이 제출
+리액트 - 웹페이지 만드는 방법만 
+
+https://fontawesome.com/v5/cheatsheet
+폰트어썸은 있는데 xeicon에는 없음
+xeicon cheatsheet :  https://younghunkimm.github.io/xeicode/
+
+
+
+내일 icon 포토샵에서 어떻게 보이게 하는지
+-------------------------------------------------------------------------
+6/9
+끊기는라인
+그 다음에는 시안을 잡는데 자동차회사로
+
+
+xeicon들어가서 홈페이지에서 다운 후 압축풀고 fonts 파일 들어가서 xeicon.ttf 들어가서 설치 누름
+포토샵 글꼴에 xeicon뜸
+문자표 들어가서 xeicon치고 문자열 입력 후 복사해서 포토샵 텍스트박스에 쓰면됨.
+(안보인다면 레아이웃이 밑에 깔린게 아닌가 확인해보기!)
+
+
+
+ctrl+shift+alt+W 저장
+ctrl+shift+alt+s 웹으로저장
+
+
+★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+액션에 단축키 등록하는 방법(이미지 크롭하는 매크로)
+
+1. 액션 창 열기 – Window > actions
+
+2. 새로 만들기 클릭 후 New Action에 이름과 단축키 설정(Function key)
+
+3. 액션 녹화가 시작되면 빨간 원이 생깁니다. 그때 원하는 기능을 작동시킨 후 정지 버튼 클릭 – 끝!
+
+이미지 크롭 -> 원하는 이미지 레이아웃 켜놓고 ctrl+C ctrl+V ctrl+n했을 때 배경 white -> 투명을 바꾸고 저장하기
+
+★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+ text-shadow  / box- shadow
+d
+이번주, 다음주는 헤더부분만 시안
+
+제이쿼리는 메소드 시간 안뺄꺼다
+어떻게 쓴다만 알면됨
+https://github.com/desipossa
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
